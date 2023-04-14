@@ -5,5 +5,5 @@
 ### No Redux Component
 1. Number counter
 
-### No Redux Component
+### With Redux Component
 1. Number counter
