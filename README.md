@@ -2,4 +2,8 @@
 
 ## Projects Added:
 
-1. Number counter using redux-toolkit
+### No Redux Component
+1. Number counter
+
+### No Redux Component
+1. Number counter
