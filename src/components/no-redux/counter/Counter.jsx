@@ -1,30 +1,24 @@
-import React from 'react';
+import * as React from 'react';
 import "./style.css"
-import { useDispatch, useSelector } from 'react-redux';
-import { decreament, increament } from '../../redux/action';
 
 export default function Counter() {
-
-    const dispatch = useDispatch()
-    const data = useSelector(state => state.value)
+    const [count, setcount] = React.useState(0)
     // debugger
     const Add = () => {
-        dispatch(increament())
-        console.log(data);
+        setcount(count + 1)
     }
 
     const Sub = () => {
-        dispatch(decreament())
-        console.log(data);
-
+        setcount(count - 1)
     }
+
 
     return (
         <div className='counter'>
             <div className='container py-5'>
                 <h2 className='counter-text fs-1 text-center'>Counter Using Redux-Toolkit</h2>
                 <div className='d-flex flex-column justify-content-center align-items-center my-4'>
-                    <input type="text" value={data} disabled className='text-center fs-1 rounded px-3 fw-bold my-4' />
+                    <input type="text" value={count} disabled className='text-center fs-1 rounded px-3 fw-bold my-4' />
                     <div className='d-flex'>
                         <button onClick={Add} className="btn-add mx-2 fw-bold rounded">+ Add</button>
                         <button onClick={Sub} className="btn-add mx-2 fw-bold rounded">- Sub</button>
